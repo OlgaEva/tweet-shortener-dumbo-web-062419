@@ -43,6 +43,10 @@ def selective_tweet_shortener(tweet)
     end
   end
 
-def shortened_tweet_truncator
-
+def shortened_tweet_truncator(tweet)
+  word_substituter(tweet)
+  if tweet.size > 140
+    tweet.delete([-3..-1])
+    tweet << "..." 
+  end  
 end
