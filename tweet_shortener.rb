@@ -51,6 +51,6 @@ def shortened_tweet_truncator(tweet)
       tweet.delete(tweet[141..-1])
       #binding.pry
       new_tweet = tweet.gsub(/tweet[138..-1])/, tweet[138] => ".", tweet[139] => ".", tweet[140] => ".")
-    
+
     end
   end
