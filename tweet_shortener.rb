@@ -47,7 +47,9 @@ def shortened_tweet_truncator(tweet)
   new_tweet = []
   word_substituter(tweet)
     if tweet.size > 140
-      new_tweet = tweet.chomp([138..-1]) + "..."
+      tweet.delete(tweet[141..-1])
+      binding.pry
+      new_tweet = tweet.gsub(/tweet[138..-1])/, tweet[138] => ".", tweet[139] => ".", tweet[140] => ".")
 
     end
   end
